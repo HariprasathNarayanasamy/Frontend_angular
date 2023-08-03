@@ -1,0 +1,21 @@
+<div class="card gx-4 bg-secondary my-5 py-4 ">
+    <div class="card-body">
+    <h1 *ngIf="viewCarModels ">Sedan Models</h1>
+    <div class="main-content">
+            <mat-card class="list-users card gx-4 bg-secondary my-5 py-4" role="listitem" *ngFor="let model of viewCarModels">
+                    <mat-card-title>{{model.model_name}} </mat-card-title>
+                    <img mat-card-md-image src="/assets/sedan.avif"  alt="">
+                    <mat-divider></mat-divider>
+                    <mat-card-content>
+                            <h3>Starts at ₹ 700 000.00* </h3>
+                            Model Name: {{model.model_name}} <br>
+                            Fuel Type: {{model.fuel_type}} <br>
+                            Transmission: {{model.transmission}} <br>
+                            Trim: {{model.trim}} <br>
+                            Price: {{model.price}}
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-raised-button color="primary" routerLinkActive="active" [routerLink] ="['/dealer' ]" (click)="saveModel_id(model.model_id)" > Book Now </button>
+                    </mat-card-actions>   
+            </mat-card>
+    </div>

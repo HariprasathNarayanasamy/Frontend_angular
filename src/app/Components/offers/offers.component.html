@@ -1,0 +1,22 @@
+<!-- <p>offers works!</p> -->
+<!-- Cards with media area --> 
+<div class="offers"> 
+  <mat-card class="view-offers" role="listoffers" *ngFor="let offers of viewalloffers">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>Applicable Models: {{offers.applicable_models}}</mat-card-title>
+        <mat-card-subtitle>Offer ID: {{offers.offer_id}}</mat-card-subtitle>
+        <img mat-card-md-image src=""  alt="***************">
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+        <p>Discount: {{offers.discount_pct}}%</p>
+        <p>Offers Start date : {{offers.start_date}}</p>
+        <p>Offers End date: {{offers.end_date}}</p>
+        <mat-card-actions>
+            <button class="action-link" [routerLink] ="['/order' ]" mat-button (click)="saveData(offers.offer_id)">Select</button>
+          </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+</div>
+  

@@ -1,0 +1,13 @@
+<br>
+<div class="card gx-4 bg-secondary my-5 py-4 ">
+  <div class="card-body">
+    <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <H1>To Create Car</H1>
+        <form  [formGroup]="formValue">
+    <div class="form-outline mb-4">
+        <input type="text" id="form3Example3" formControlName="order_id" class="form-control form-control-lg"
+          placeholder="">
+        <label class="form-label" for="form3Example3">Order ID</label>
+        <div class="text-center text-lg-start mt-4 pt-2">
+        <a button type="button" class="btn btn-primary btn-lg" routerLink="/production" routerLinkActive="active" (click)="postBookedDetails()" >Add</a>
+    </div>

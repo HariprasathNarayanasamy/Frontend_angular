@@ -1,0 +1,15 @@
+<br>
+<div class="card gx-4 bg-secondary my-5 py-4 ">
+        <div class="card-body">
+                <div class="main-content">
+                        <mat-card class="view-users" role="viewitem" *ngFor="let user of viewUsers">
+                                <mat-card-title>UserName: {{user.user_name}} </mat-card-title>
+                                <mat-card-content>
+                                        Role: {{user.role}} <br>
+                                        User ID: {{user.user_id}} <br>
+                                        Email: {{user.email}} <br>
+                                        Phone Number: {{user.phone_number}} <br>
+                                        Order ID: {{user.order_id}}
+                                </mat-card-content>
+                        </mat-card>
+                </div>

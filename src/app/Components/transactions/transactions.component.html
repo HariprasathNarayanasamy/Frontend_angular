@@ -1,0 +1,63 @@
+<div class="card gx-4 bg-secondary my-5 py-4 ">
+  <div class="card-body">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-9 col-lg-6 col-xl-5">
+                  <img src="assets/scorpio.webp"
+                    class="img-fluid" alt="Sample image">
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                  <form  [formGroup]="formValue">
+                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Transaction Page</p>
+                    <br>
+          
+                    <!-- transaction amount -->
+                    <div class="form-outline mb-3">
+                      <input type="number" id="form3Example4" formControlName="transaction_amount" class="form-control form-control-lg"
+                        placeholder="Enter Amount" />
+                      <label class="form-label" for="form3Example4">Pay To Book</label>
+                    </div>
+
+                    <!-- Date -->
+                    <div class="form-outline mb-3">
+                        <input type="date" [ngModel]="currentDate | date:'yyyy-MM-dd'" (ngModelChange)="currentDate = $event" id="form3Example5" formControlName="date" class="form-control form-control-lg"
+                          placeholder="" />
+                        <label class="form-label" for="form3Example4">Date</label>
+                      </div>
+
+                    <!-- timing -->
+                    <div class="form-outline mb-3">
+                        <input type="text" id="datetime" [ngModel]="currentTime | date  : 'hh:mm:ss a'" (ngModelChange)="currentDate = $event" id="form3Example6" formControlName="timing" class="form-control form-control-lg"
+                          placeholder='' />
+                        <label class="form-label" for="form3Example6">Time</label>
+                      </div>
+
+                    <!-- user_name input -->
+                    <div class="form-outline mb-4">
+                      <input type="text" id="form3Example7" formControlName="account_from" class="form-control form-control-lg"
+                        placeholder="User Name">
+                      <label class="form-label" for="form3Example3">Account From</label>
+                    </div>
+
+                      <div class="form-outline mb-4">
+                        <select name="" type="text" id="form3Example1" formControlName="account_to" class="form-control form-control-lg form-select" list="Dealer" >
+                            <option value="Dealer1">Dealer1</option>
+                            <option value="Dealer2">Dealer2</option>
+                            <option value="Dealer3">Dealer3</option>
+                            <option value="Dealer4">Dealer4</option>
+                        </select>
+                        <label class="form-label" for="form3Example1">Dealer</label>
+                      </div>
+                    
+          
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                    
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                      <button type="button" class="btn btn-primary btn-lg"  (click)="postTransactionsDetails()">Done</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+    

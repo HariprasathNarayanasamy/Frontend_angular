@@ -1,0 +1,15 @@
+<div class="card gx-4 bg-secondary my-5 py-4 ">
+        <div class="card-body">
+        <h1>Transaction-ID</h1>
+        <div class="main-content">
+        <mat-card class="view-transactionID" role="transactionID" *ngFor="let transactions of viewtransaction_id">
+                <mat-card-title>{{transactions.transaction_id}} </mat-card-title>
+                
+                <mat-card-content >
+                <mat-divider></mat-divider>                   
+                </mat-card-content>
+                <mat-card-actions>
+                        <a class="action-link" [routerLink] ="['/offers' ]" (click)="saveTransactionid(transactions.transaction_id)">Next</a> 
+                </mat-card-actions>   
+        </mat-card>
+        </div>

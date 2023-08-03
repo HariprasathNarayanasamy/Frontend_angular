@@ -1,0 +1,21 @@
+<div class="card gx-4 bg-secondary my-5 py-4 ">
+        <div class="card-body">
+<h1 *ngIf="viewcarmodels ">Displaying All {{ viewcarmodels.length }} cars</h1>
+   <button class="button" [routerLink]="['/addcar']">Add car</button>
+<div class="main-content">
+        <mat-card class="view-cars" role="listcarmodel" *ngFor="let cars of viewcarmodels">
+                <mat-card-title>Model ID : {{cars.model_id}} </mat-card-title>
+                <mat-card-content>
+                        Model Name: {{cars.model_name}}<br>
+                        Model Type: {{cars.model_type}}<br>
+                        Price: {{cars.price}}<br>
+                        Transmission: {{cars.transmission}}<br>
+                        Trim: {{cars.trim}}<br>
+                </mat-card-content>
+                <mat-card-actions>
+                        <a class="action-link" [routerLink]="['/view', cars.model_id]">View</a> |   <a class="action-link" [routerLink]="['/addprice', cars.model_id]" (click)="saveModelid(cars.model_id)">Edit</a>
+                </mat-card-actions>   
+        </mat-card>
+        
+</div>
+

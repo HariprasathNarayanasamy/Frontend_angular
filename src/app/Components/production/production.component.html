@@ -1,0 +1,26 @@
+<div class="card gx-4 bg-secondary my-5 py-4 ">
+        <div class="card-body">       
+<h1 *ngIf="viewOrders">All Booked Cars To Deliver</h1>
+<div class="main-content">
+        <mat-card class="list-cars" role="listitem" *ngFor="let cars of viewOrders" >
+                        <mat-card-title>Model ID: {{cars.model_id}}</mat-card-title>
+                        <mat-card-content>
+                                Order ID: {{cars.order_id}} <br>
+                                colour: {{cars.colour}} <br>
+                                Customer_Email: {{cars.email}} <br>
+                        </mat-card-content>
+                <mat-card-actions>
+                <button class="action-link" routerLink="/createcar" routerLinkActive="active" mat-button (click)="saveOrderid(cars.order_id)">Select</button>
+                </mat-card-actions>   
+        </mat-card>
+</div>
+
+<h1 *ngIf="viewVehicleid"></h1>
+<div class="main-content">
+        <mat-card class="created-cars" role="listitem" *ngFor="let vehicle of viewVehicleid" >
+                <mat-card-content>
+                        Order ID: {{vehicle.order_id}} <br>
+                        vehicle ID: {{vehicle.vehicle_id}}
+                </mat-card-content>
+        </mat-card>
+</div>

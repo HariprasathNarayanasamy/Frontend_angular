@@ -1,0 +1,17 @@
+<div class="card gx-4 bg-secondary my-5 py-4 ">
+        <div class="card-body">
+        <h1 *ngIf="listUsers ">Displaying All {{ listUsers.length }} Users</h1>
+        <div class="main-content">
+                <mat-card class="list-users" role="listitem" *ngFor="let user of listUsers">
+                <!-- <span class="user"> -->
+                        <mat-card-title>{{user.user_name}} </mat-card-title>
+                        <mat-card-content>
+                                Role: {{user.role}} <br>
+                                user_id: {{user.user_id}}
+                        </mat-card-content>
+                        <mat-card-actions>
+                                <a class="action-link" [routerLink]="['/users/view', user.user_id]">View</a> |   <a class="action-link" [routerLink]="['/users/edit' ]">Edit</a> | <a class="action-link" [routerLink] ="['/users', user.user_id ]">Delete</a> 
+                        </mat-card-actions>   
+                </mat-card>
+        </div>
+

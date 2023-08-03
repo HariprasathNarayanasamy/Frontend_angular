@@ -1,0 +1,48 @@
+<div class="card gx-4 bg-secondary my-5 py-4 ">
+  <div class="card-body">
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="assets/scorpio.webp"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+          <form  [formGroup]="formValue" novalidate>
+            <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">LOGIN</p>
+            <br>
+            <!-- email input -->
+            <div class="form-outline mb-4">
+              <input type="text" id="form3Example3" formControlName="email" class="form-control form-control-lg"
+                placeholder="Enter Your Email ID ">
+              <label class="form-label" for="form3Example3">Email ID</label>
+            </div>
+  
+            <!-- Password input -->
+            <div class="form-outline mb-3">
+              <input type="password" id="form3Example4" formControlName="password" class="form-control form-control-lg"
+                placeholder="Password" />
+              <label class="form-label" for="form3Example4">Password</label>
+            </div>
+  
+            <div class="d-flex justify-content-between align-items-center">
+              <!-- Checkbox -->
+              <div class="form-check mb-0">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                <label class="form-check-label" for="form2Example3">
+                  Remember me
+                </label>
+              </div>
+              <a href="#!" class="text-body">Forgot password?</a>
+            </div>
+  
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <button type="button" class="btn btn-primary btn-lg" (click)="saveEmail(formValue.value.email)" (click)="postLoginDetails()">Login</button>
+              <p class="small fw-bold mt-2 pt-1 mb-0" style="text-align: center;">Don't have an account? <a href="#!"
+                  class="link-danger" routerLink="/register" routerLinkActive="active" >Register</a></p>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>

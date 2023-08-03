@@ -1,0 +1,95 @@
+<div class="card gx-4 bg-secondary my-5 py-4 ">
+  <div class="card-body">
+    <h1>Select To Add Car Model</h1>
+
+    <form class="mx-1 mx-md-4" [formGroup]="formValue" >
+                      
+
+      <div class="d-flex flex-row align-items-center mb-4">
+        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+        <div class="form-outline flex-fill mb-0">
+          <select name="Model Name" type="text" id="RoleInput" formControlName="model_name" class="form-select" list="modelname" >
+              <option value="Bolero">Bolero</option>
+              <option value="XUV700">XUV700</option>
+              <option value="THAR">THAR</option>
+              <option value="Scorpio">Scorpio</option>
+              <option value="Scorpio-N">Scorpio-N</option>
+              <option value="verito">Verito</option>
+              <option value="Bolero-Pickup">Bolero-Pickup</option>
+              <option value="XUV400ev">XUV400ev</option>
+              <option value="Bolero Camper">Bolero Camper</option>
+              <option value="Scorpio Classic">Scorpio Classic</option>
+              <option value="Bolero-NEO">Bolero-NEO</option>
+
+
+          </select>
+          <label class="form-label" for="form3Example1c">Model Name</label>
+        </div>
+      </div>
+
+      <div class="d-flex flex-row align-items-center mb-4">
+        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+        <div class="form-outline flex-fill mb-0">
+          <select name="Model Type" type="text" id="RoleInput" formControlName="model_type" class="form-select" list="Modeltype" >
+              <option value="SUVs">SUVs</option>
+              <option value="Hatchback">HatchBack</option>
+              <option value="Sedan">Sedan</option>
+              <option value="pickuptruck">Pickuptruck</option>
+              <option value="MUV">MUV</option>
+              <option value="off road">Off-Road</option>
+          </select>
+          <label class="form-label" for="form3Example1c">Model Type</label>
+        </div>
+      </div>
+
+        <div class="d-flex flex-row align-items-center mb-4">
+          <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+          <div class="form-outline flex-fill mb-0">
+            <select name="Transmission" type="text" id="RoleInput" formControlName="transmission" class="form-select" list="Transmission" >
+                <option value="manual">Manual</option>
+                <option value="automatic">Automatic</option>
+            </select>
+            <label class="form-label" for="form3Example1c">Transmission</label>
+          </div>
+        </div>
+
+        <div class="d-flex flex-row align-items-center mb-4">
+          <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+          <div class="form-outline flex-fill mb-0">
+            <select name="Fuel Type" type="text" id="RoleInput" formControlName="fuel_type" class="form-select" list="FuelType" >
+                <option value="diesel">Diesel</option>
+                <option value="petrol">Petrol</option>
+                <option value="ev">EV</option>
+                <option value="cng">CNG</option>
+            </select>
+            <label class="form-label" for="form3Example1c">Fuel Type</label>
+          </div>
+        </div>
+
+
+        <div class="d-flex flex-row align-items-center mb-4">
+          <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+          <div class="form-outline flex-fill mb-0">
+            <select name="Trim" type="text" id="RoleInput" formControlName="trim" class="form-select" list="Trim" >
+                <option value="SE">SE</option>
+                <option value="DX">DX</option>
+                <option value="GT">GT</option>
+            </select>
+            <label class="form-label" for="form3Example1c">Trim</label>
+          </div>
+        </div>
+
+
+        <div class="form-check d-flex justify-content-center mb-5">
+          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+          <label class="form-check-label" for="form2Example3">
+            I agree all statements in <a href="#!">Terms of service</a>
+          </label>
+        </div>
+
+        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+          <a button type="button" class="btn btn-primary btn-lg"  (click)="postCarDetails()" (click)="clearForm()">Add</a>
+          
+        </div>
+
+      </form>
